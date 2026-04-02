@@ -34,9 +34,7 @@
         </select>
         <span class="label-strong">by</span>
         <select id="gran" class="control-select">
-          <option value="genre">Genre</option>
           <option value="play">Chapter</option>
-          <option value="act">Section</option>
           <option value="line" selected>Paragraph Text</option>
         </select>
         <span class="label-strong">matching</span>
@@ -1328,7 +1326,7 @@
 
       const baseCols = [
         { key: 'location', label: 'Location', defaultDir: 'asc', type: 'text' },
-        { key: 'play_title', label: 'Book', defaultDir: 'asc', type: 'text' },
+        { key: 'play_title', label: 'Chapter', defaultDir: 'asc', type: 'text' },
         { key: 'act', label: 'Chapter', type: 'number' },
         { key: 'scene', label: 'Verse', type: 'number' }
       ];
@@ -1347,7 +1345,7 @@
     if (granVal==='scene'){
       const baseCols = [
         {key:'location', label:'Location', defaultDir:'asc', type:'text'},
-        {key:'play_title', label:'Book', defaultDir:'asc', type:'text'},
+        {key:'play_title', label:'Chapter', defaultDir:'asc', type:'text'},
         {key:'act', label:'Chapter', type:'number'},
         {key:'scene', label:'Verse', type:'number'},
         {key:'ngram_count', label: getBaseCountLabel(), type:'number'}
@@ -1380,7 +1378,7 @@
     if (granVal==='act'){
       const baseCols = [
         {key:'location', label:'Location', defaultDir:'asc', type:'text'},
-        {key:'play_title', label:'Book', defaultDir:'asc', type:'text'},
+        {key:'play_title', label:'Chapter', defaultDir:'asc', type:'text'},
         {key:'act', label:'Chapter', type:'number'},
         {key:'ngram_count', label: getBaseCountLabel(), type:'number'}
       ];
@@ -1421,8 +1419,8 @@
     if (granVal==='play'){
       const baseCols = [
         {key:'location', label:'Location', defaultDir:'asc', type:'text'},
-        {key:'title', label:'Book', defaultDir:'asc', type:'text'},
-        {key:'genre', label:'Testament', defaultDir:'asc', type:'text'},
+        {key:'title', label:'Chapter', defaultDir:'asc', type:'text'},
+        {key:'genre', label:'Genre', defaultDir:'asc', type:'text'},
         {key:'num_chapters', label:'# chapters', type:'number'},
         {key:'num_lines', label:'# verses', type:'number'},
         {key:'ngram_count', label: getBaseCountLabel(), type:'number'}
@@ -1459,7 +1457,7 @@
 
     if (granVal==='genre'){
       const baseCols = [
-        {key:'genre', label:'Testament', defaultDir:'asc', type:'text'},
+        {key:'genre', label:'Genre', defaultDir:'asc', type:'text'},
         {key:'num_plays', label:'# books', type:'number'},
         {key:'ngram_count', label: getBaseCountLabel(), type:'number'}
       ];
